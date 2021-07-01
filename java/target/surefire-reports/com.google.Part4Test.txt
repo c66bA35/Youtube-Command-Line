@@ -1,0 +1,83 @@
+-------------------------------------------------------------------------------
+Test set: com.google.Part4Test
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 9, Errors: 0, Skipped: 0, Time elapsed: 0.087 s <<< FAILURE! - in com.google.Part4Test
+com.google.Part4Test.testAllowVideo  Time elapsed: 0.015 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: a string containing "Successfully removed flag from video: Amazing Cats"
+     but: was "allowVideo needs implementation"
+	at com.google.Part4Test.testAllowVideo(Part4Test.java:236)
+
+com.google.Part4Test.testAllowVideoNotFlagged  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: a string containing "Cannot remove flag from video: Video is not flagged"
+     but: was "allowVideo needs implementation
+"
+	at com.google.Part4Test.testAllowVideoNotFlagged(Part4Test.java:245)
+
+com.google.Part4Test.testFlagVideoStopPausedVideo  Time elapsed: 0.009 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Playing video: Amazing Cats
+Pausing video: Amazing Cats
+Successfully flagged video: Amazing Cats (reason: dont_like_cats)
+Currently playing: Amazing Cats (amazing_cats_video_id) [#cat #animal] - PAUSED
+ ==> expected: <5> but was: <4>
+	at com.google.Part4Test.testFlagVideoStopPausedVideo(Part4Test.java:203)
+
+com.google.Part4Test.testFlagVideosPlayRandom  Time elapsed: 0.001 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Successfully flagged video: Funny Dogs (reason: Not supplied)
+Successfully flagged video: Amazing Cats (reason: Not supplied)
+Successfully flagged video: Another Cat Video (reason: Not supplied)
+Successfully flagged video: Life at Google (reason: Not supplied)
+Successfully flagged video: Video about nothing (reason: Not supplied)
+ ==> expected: <6> but was: <5>
+	at com.google.Part4Test.testFlagVideosPlayRandom(Part4Test.java:68)
+
+com.google.Part4Test.testAllowVideoNonexistent  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: a string containing "Cannot remove flag from video: Video does not exist"
+     but: was "allowVideo needs implementation
+"
+	at com.google.Part4Test.testAllowVideoNonexistent(Part4Test.java:253)
+
+com.google.Part4Test.testAllowVideoShowPlaylist  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: a string containing "Successfully removed flag from video: Amazing Cats"
+     but: was "allowVideo needs implementation"
+	at com.google.Part4Test.testAllowVideoShowPlaylist(Part4Test.java:276)
+
+com.google.Part4Test.testFlagVideoSearchVideos  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Successfully flagged video: Amazing Cats (reason: dont_like_cats)
+Here are the results for cat:
+1) Amazing Cats (amazing_cats_video_id) [#cat #animal]
+2) Another Cat Video (another_cat_video_id) [#cat #animal]
+Would you like to play any of the above? If yes, specify the number of the video.
+If your answer is not a valid number, we will assume it's a no.
+ ==> expected: <5> but was: <6>
+	at com.google.Part4Test.testFlagVideoSearchVideos(Part4Test.java:148)
+
+com.google.Part4Test.testFlagVideoStopPlayingVideo  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Playing video: Amazing Cats
+Successfully flagged video: Amazing Cats (reason: dont_like_cats)
+Currently playing: Amazing Cats (amazing_cats_video_id) [#cat #animal]
+ ==> expected: <4> but was: <3>
+	at com.google.Part4Test.testFlagVideoStopPlayingVideo(Part4Test.java:187)
+
+com.google.Part4Test.testFlagVideoSearchVideosWithTag  Time elapsed: 0.004 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+Successfully flagged video: Amazing Cats (reason: dont_like_cats)
+Here are the results for #cat:
+1) Amazing Cats (amazing_cats_video_id) [#cat #animal]
+2) Another Cat Video (another_cat_video_id) [#cat #animal]
+Would you like to play any of the above? If yes, specify the number of the video.
+If your answer is not a valid number, we will assume it's a no.
+ ==> expected: <5> but was: <6>
+	at com.google.Part4Test.testFlagVideoSearchVideosWithTag(Part4Test.java:168)
+
